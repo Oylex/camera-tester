@@ -1,0 +1,13 @@
+<div *ngIf="success" class="success">SUCCESS</div>
+<div *ngIf="failure" class="failure">FAILURE</div>
+
+<div *ngIf="!success && !failure">
+  <p>This is a benchmark that will turn the camera on and off at different interval for a number of time, it will take up to 20 minutes, when it's done it will show either "success" or "failure".</p>
+
+  <video #cameraFeed id="cameraFeed" muted style="width: 960px; height: 540px;"></video>
+</div>
+
+<div>Delay: {{ delay }}ms / {{ maxDelay }}ms</div>
+<div>Attempt #: {{ attempt }} / {{ attemptsForSuccess }}</div>
+<div *ngIf="startTime">Start time: {{ startTime }}</div>
+<div *ngIf="endTime">End time: {{ endTime }}</div>
